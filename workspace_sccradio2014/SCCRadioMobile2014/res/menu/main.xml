@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ar.com.sccradiomobile.home.HomePage" >
+<!-- 
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never"/>
+ -->
+  <item android:id="@+id/liveScores"
+        android:icon="@drawable/ic_launcher" android:showAsAction="always" android:title="Live Scores"
+         android:titleCondensed="LiveScores" android:visible="true"></item>
+  
+</menu>

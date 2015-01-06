@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <LinearLayout    android:orientation="vertical"
+                   android:layout_height="fill_parent"
+                   android:layout_width="fill_parent"
+                   android:background="@color/white"
+                   xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:id="@+id/ll_estadisticas_row"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"      android:background="@color/white">
+
+        <TextView
+            android:id="@+id/nro_columna"
+            android:layout_width="4dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.40"
+            android:text="23"  android:textSize="@dimen/texto_fila_jugadas" android:gravity="center_horizontal">
+        </TextView>
+
+        <TextView
+            android:id="@+id/jugador_columna"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Walter Hermman (1)"       android:textSize="@dimen/texto_fila_jugadas"
+            android:layout_weight="1.70" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/pts_columna"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="32"         android:textSize="@dimen/texto_fila_jugadas"
+            android:layout_weight="0.50"  android:gravity="center_horizontal">
+        </TextView>
+
+        <TextView
+            android:id="@+id/libres_columna"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="2"    android:textSize="@dimen/texto_fila_jugadas"
+            android:layout_weight="1.50" android:gravity="center_horizontal">
+        </TextView>
+
+        <TextView
+               android:id="@+id/dobles_colmuna"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:text="18"    android:textSize="@dimen/texto_fila_jugadas"
+               android:layout_weight="1.50" android:gravity="center_horizontal">
+           </TextView>
+        <TextView
+              android:id="@+id/triples_columna"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="5%"
+              android:layout_weight="1.50" android:textSize="@dimen/texto_fila_jugadas"
+              android:gravity="center_horizontal">
+          </TextView>
+          <TextView
+                    android:id="@+id/conv_columna"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="4" android:textSize="@dimen/texto_fila_jugadas"
+                    android:layout_weight="1.50" android:gravity="center_horizontal">
+            </TextView>
+            <TextView
+                    android:id="@+id/rt_columna"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="6" android:textSize="@dimen/texto_fila_jugadas"
+                    android:layout_weight="1.50" android:gravity="center_horizontal">
+            </TextView>
+            <TextView
+                    android:id="@+id/as_columna"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="4" android:textSize="@dimen/texto_fila_jugadas"
+                    android:layout_weight="0.50" android:gravity="center_horizontal">
+            </TextView>
+            <TextView
+                    android:id="@+id/ta_columna"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="2" android:textSize="@dimen/texto_fila_jugadas"
+                    android:layout_weight="0.50" android:gravity="center_horizontal">
+            </TextView>
+            <TextView
+                    android:id="@+id/pr_columna"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="4" android:textSize="@dimen/texto_fila_jugadas"
+                    android:layout_weight="0.50" android:gravity="center_horizontal">
+            </TextView>
+            <TextView
+                    android:id="@+id/pp_columna"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="8" android:textSize="@dimen/texto_fila_jugadas"
+                    android:layout_weight="0.50" android:gravity="center_horizontal">
+            </TextView>
+            <TextView
+                    android:id="@+id/fp_columna"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="2" android:textSize="@dimen/texto_fila_jugadas"
+                    android:layout_weight="0.50"  android:gravity="center_horizontal">
+            </TextView>
+            <TextView
+                    android:id="@+id/fr_columna"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="4" android:textSize="@dimen/texto_fila_jugadas"
+                    android:layout_weight="0.50" android:gravity="center_horizontal">
+            </TextView>
+            <TextView
+                   android:id="@+id/tj_columna"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:text="44.5" android:textSize="@dimen/texto_fila_jugadas"
+                   android:layout_weight="1.50" android:gravity="center_horizontal">
+           </TextView>
+           <TextView
+                android:id="@+id/val_columna"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="4" android:textSize="@dimen/texto_fila_jugadas"
+                android:layout_weight="0.50" android:gravity="center_horizontal">
+           </TextView>
+
+    </LinearLayout>
+    <TextView
+          android:id="@+id/line_empty" android:visibility="gone"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text=" "    android:textSize="@dimen/texto_fila_jugadas"
+          android:gravity="center_horizontal" android:background="@color/orange_middle"
+          android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="10dp"
+          android:layout_marginBottom="10dp">
+      </TextView>
+</LinearLayout>

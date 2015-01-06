@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/feed_bg"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+    <!--  ListRow Left sied Thumbnail image -->
+    <LinearLayout android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dip"
+        android:layout_alignParentLeft="true"
+        android:background="@color/white"
+        android:layout_marginRight="5dip">
+
+        <com.android.volley.toolbox.NetworkImageView
+               android:id="@+id/ivThumbnail"
+               android:layout_width="80dp"
+               android:layout_height="80dp" />
+
+    </LinearLayout>
+
+    <!-- Title of Image -->
+    <TextView
+        android:id="@+id/tvAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="Author of image"
+        android:textColor="@color/black"
+        android:typeface="sans"
+        android:textSize="15sp"
+        android:textStyle="bold" android:layout_marginTop="4dp"/>
+
+    <!-- description of image -->
+        <TextView android:id="@+id/description" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="description" android:textColor="@color/text_color_noticia_detalle" android:typeface="sans"
+                  android:textSize="13sp"
+                  android:layout_below="@+id/tvAuthor" android:layout_toRightOf="@+id/thumbnail"
+                  android:layout_toEndOf="@+id/thumbnail" android:layout_marginTop="10dp"/>
+
+    <!-- tags of image -->
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="tags: SCCRadio"
+        android:textSize="12sp"
+        android:textColor="@color/link"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/thumbnail" android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" android:layout_marginRight="39dp" android:layout_marginEnd="39dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <dimen name="title_height">45dip</dimen>
+    <dimen name="title_bar_text_size">20sp</dimen>
+    <dimen name="text_body_padding">4sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="text_size_large">22sp</dimen>
+
+    <dimen name="home_button_text_size">20sp</dimen>
+    <dimen name="home_button_size">150dp</dimen>
+    <dimen name="home_button_size_x">150dp</dimen>
+    <dimen name="home_button_size_y">100dp</dimen>
+    
+     <!-- Default screen margins, per the Android Design guidelinesTNA. -->
+    <dimen name="fixture_match_text_size">26dp</dimen>
+    <dimen name="fecha_size_2012">29sp</dimen>
+    <dimen name="fixture_header_size">32dp</dimen>
+    <dimen name="fixture_header_text_size">26dp</dimen>
+    <dimen name="fixture_match_text_size_little">25dp</dimen>
+    <dimen name="screen_title_size">28pt</dimen>
+
+    <!-- sliding menu -->
+    <dimen name="slidingmenu_shadow_width">15dp</dimen>
+    <dimen name="slidingmenu_offset">900dp</dimen>
+
+    <!-- lnb menu -->
+    <dimen name="lnb_button_h">140dip</dimen>
+</resources>

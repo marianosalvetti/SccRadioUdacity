@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"    android:background="@color/white" >
+
+    <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Estadisticas del partido" android:id="@+id/tvPartidoId"     android:background="@color/white"
+           android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:paddingBottom="5dp"/>
+
+    <LinearLayout
+            android:id="@+id/ll_equipos" android:orientation="horizontal"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPartidoId" android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            >
+        <TextView
+               android:id="@+id/titulo_local"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="LOCAL"   android:paddingRight="5dp"
+           />
+            <TextView
+                        android:id="@+id/titulo_vs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" vs "   android:paddingRight="5dp" android:paddingLeft="5dp"
+                      />
+           <TextView
+                 android:id="@+id/titulo_visitante"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="VISITANTE"    android:paddingLeft="5dp"
+               />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+             android:id="@+id/header_jornadas"
+             android:layout_height="wrap_content"
+             android:layout_width="fill_parent" android:layout_below="@+id/ll_equipos"    android:background="@color/white"
+             android:layout_alignParentLeft="true" android:layout_alignParentStart="true" android:paddingTop="3dp">
+
+             <TextView
+                android:id="@+id/header_nro_columna"
+                android:layout_width="4dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.30"
+                 android:text="#"   android:textSize="@dimen/texto_header_columnas"   android:textStyle="bold"
+                 android:gravity="center_horizontal">
+             </TextView>
+
+             <TextView
+                android:id="@+id/header_jugador_columna"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.70"
+                 android:text="JUGADOR"    android:textSize="@dimen/texto_header_columnas"   android:textStyle="bold"
+                 android:gravity="center_horizontal">
+             </TextView>
+
+             <TextView
+                 android:id="@+id/header_pts_columna"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:text="PUNTOS" android:textSize="@dimen/texto_header_columnas"  android:textStyle="bold"
+                 android:layout_weight="1" android:gravity="center_horizontal">
+             </TextView>
+
+             <TextView
+                 android:id="@+id/header_fp_columna"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:text="FALTAS"  android:textSize="@dimen/texto_header_columnas"  android:textStyle="bold"
+                 android:layout_weight="1" android:gravity="center_horizontal">
+             </TextView>
+
+             <TextView
+                    android:id="@+id/header_val_columna"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="VAL"  android:textSize="@dimen/texto_header_columnas"  android:textStyle="bold"
+                    android:layout_weight="1" android:gravity="center_horizontal">
+                </TextView>
+             <TextView
+                   android:id="@+id/header_tj_columna"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:text="T.Juego"  android:textSize="@dimen/texto_header_columnas"     android:textStyle="bold"
+                   android:layout_weight="1" android:gravity="center_horizontal">
+               </TextView>
+         </LinearLayout>
+
+      <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayoutEstadisticas"
+            android:layout_width="match_parent"        android:layout_below="@id/header_jornadas"
+                     android:layout_height="match_parent" android:layout_alignParentBottom="true"
+          >
+
+    <ListView
+         android:id="@+id/listViewEstadisticas"
+         android:layout_width="match_parent" android:layout_height="wrap_content"
+         android:textColor="@android:color/black"
+         android:background="@color/white"
+             android:cacheColorHint="#00ffffff"
+             android:clickable="false"
+             android:divider="#ff000000"
+             android:dividerHeight="1dp"
+             android:focusable="false"
+             android:layout_below="@+id/header_jornadas" android:layout_alignParentLeft="true"
+             android:layout_alignParentStart="true">
+     </ListView>
+
+      </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>

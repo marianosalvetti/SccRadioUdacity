@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@color/white"
+        >
+
+
+    <LinearLayout   android:id="@+id/ll_header"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|top"
+            android:layout_alignParentTop="true" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" android:layout_marginTop="3dp">
+
+    <RelativeLayout
+               android:id="@+id/ll_header_local"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"   android:background="@color/white"  >
+
+                <com.android.volley.toolbox.NetworkImageView
+                             android:id="@+id/escudo_local"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             />
+        <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="68"
+                   android:id="@+id/tv_local_puntos"
+                   android:textSize="15sp" android:layout_alignParentTop="true"
+                   android:layout_toRightOf="@+id/escudo_local" android:layout_marginTop="10dp"/>
+        <TextView   android:id="@+id/tv_local"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Local"    android:visibility="gone"
+                       android:layout_below="@+id/tv_local_puntos" android:layout_alignParentLeft="true"
+                       android:layout_alignParentStart="true"/>
+    </RelativeLayout>
+        <ar.com.sccradiomobile.utils.RobotoTextView
+                 android:id="@+id/tvPartidoId" android:paddingLeft="5dp" android:paddingRight="5dp"
+                 android:layout_marginTop="8dp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="PARTIDO FINALIZADO"  android:textStyle="bold"
+                 android:textColor="@color/red"
+                 android:textSize="22sp" />
+
+        <RelativeLayout
+               android:id="@+id/ll_header_visitante"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"   android:background="@color/white" >
+
+            <com.android.volley.toolbox.NetworkImageView
+                         android:id="@+id/escudo_visitante"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentTop="true" android:layout_toRightOf="@+id/tv_visitante_puntos"/>
+                <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="88"
+                           android:id="@+id/tv_visitante_puntos"
+                           android:layout_alignParentTop="true" android:layout_alignParentLeft="true"
+                           android:layout_alignParentStart="true" android:textSize="15sp"
+                           android:layout_marginTop="10dp"/>
+
+
+                <TextView   android:id="@+id/tv_visitante"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"     android:visibility="gone"
+                               android:text="Visitante" android:layout_below="@+id/tv_visitante_puntos"
+                               android:layout_alignParentLeft="true" android:layout_alignParentStart="true"/>
+            </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+             android:id="@+id/header_estadisticas_equipos"
+             android:layout_height="wrap_content"    android:background="@color/white"
+             android:layout_width="fill_parent" android:layout_below="@+id/ll_header"
+             android:layout_alignParentLeft="true" android:layout_alignParentStart="true" android:paddingTop="3dp">
+
+        <TextView
+               android:id="@+id/FirstColumnText"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="2"             android:textStyle="bold"
+               android:textSize="@dimen/texto_columna_detalle" android:gravity="left"
+               android:layout_gravity="center_horizontal" android:layout_marginLeft="5dp"
+               android:text="Estadisticas Equipo">
+           </TextView>
+
+           <TextView
+               android:id="@+id/SecondColumLocalText"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:text="Local"       android:textSize="@dimen/texto_columna_detalle"   android:textStyle="bold"
+               android:layout_weight="1" android:gravity="center_horizontal">
+           </TextView>
+
+           <TextView
+               android:id="@+id/ThirdColumnVisitanteText"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:text="Visitante"         android:textSize="@dimen/texto_columna_detalle"   android:textStyle="bold"
+               android:layout_weight="1" android:gravity="center_horizontal">
+           </TextView>
+
+         </LinearLayout>
+
+
+
+    <ListView
+         android:id="@+id/listViewEstadisticasEquipos"
+         android:layout_width="wrap_content" android:layout_height="wrap_content"
+         android:textColor="@android:color/black"
+             android:background="@color/white"
+             android:cacheColorHint="#00ffffff"
+             android:clickable="false"
+             android:divider="#ff000000"
+             android:dividerHeight="1dp"
+             android:focusable="false"
+             android:layout_below="@+id/header_estadisticas_equipos" android:layout_alignParentLeft="true"
+             android:layout_alignParentStart="true" android:visibility="visible">
+     </ListView>
+
+    <LinearLayout
+                android:id="@+id/titulo_seccion_titulares" android:orientation="vertical"
+                android:layout_height="wrap_content"    android:background="@color/white"
+                android:layout_width="wrap_content"
+                android:paddingTop="10dp"   android:paddingBottom="10dp"    android:paddingLeft="5dp"
+                android:layout_below="@+id/listViewEstadisticasEquipos"
+                android:layout_marginTop="10dp">
+            <TextView
+                    android:id="@+id/texto_arbitros"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"   android:textSize="@dimen/texto_header"
+                    android:text="Arbitros"     android:textStyle="bold"
+                    android:background="@color/white"  />
+
+            <TextView android:text="CHITI ALEJANDRO CESAR" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:text="SMITH ROBERTO OMAR" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:text="TARIFEÑO SERGIO GABRIEL" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+                        android:id="@+id/parciales_headers"
+                        android:layout_below="@+id/titulo_seccion_titulares"
+                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:background="@color/white"
+                        android:layout_alignParentLeft="true" android:layout_alignParentStart="true" android:paddingTop="10dp"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=" "
+                            android:textSize="@dimen/texto_header_columnas"   android:textStyle="bold"
+                            android:gravity="center_horizontal">
+                        </TextView>
+
+                        <TextView
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="cuarto 1"    android:textSize="@dimen/texto_header_columnas"   android:textStyle="bold"
+                            android:gravity="center_horizontal">
+                        </TextView>
+
+                        <TextView
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="cuarto 2" android:textSize="@dimen/texto_header_columnas"  android:textStyle="bold"
+                            android:layout_weight="1" android:gravity="center_horizontal">
+                        </TextView>
+
+                        <TextView
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="cuarto 3"  android:textSize="@dimen/texto_header_columnas"  android:textStyle="bold"
+                            android:layout_weight="1" android:gravity="center_horizontal">
+                        </TextView>
+
+                        <TextView
+
+                               android:layout_width="0dp"
+                               android:layout_height="wrap_content"
+                               android:text="cuarto 4"  android:textSize="@dimen/texto_header_columnas"  android:textStyle="bold"
+                               android:layout_weight="1" android:gravity="center_horizontal">
+                           </TextView>
+                        <TextView
+
+                              android:layout_width="0dp"
+                              android:layout_height="wrap_content"
+                              android:text="TOTAL"  android:textSize="@dimen/texto_header_columnas"     android:textStyle="bold"
+                              android:layout_weight="1" android:gravity="center_horizontal">
+                          </TextView>
+                    </LinearLayout>
+    <LinearLayout
+                android:id="@+id/parciales_local"
+                android:layout_below="@+id/parciales_headers"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:background="@color/white"
+                android:layout_alignParentLeft="true" android:layout_alignParentStart="true" android:paddingTop="3dp">
+
+                <TextView
+                   android:id="@+id/FirstText"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                    android:text="Peñarol (MdP)"
+                    android:textSize="@dimen/texto_header_columnas"
+                    android:gravity="center_horizontal">
+                </TextView>
+
+                <TextView
+                   android:id="@+id/SecondText"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                    android:text="14"    android:textSize="@dimen/texto_header_columnas"
+                    android:gravity="center_horizontal">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ThirdText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="21" android:textSize="@dimen/texto_header_columnas"
+                    android:layout_weight="1" android:gravity="center_horizontal">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/FourthText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="13"  android:textSize="@dimen/texto_header_columnas"
+                    android:layout_weight="1" android:gravity="center_horizontal">
+                </TextView>
+
+                <TextView
+                       android:id="@+id/FifthText"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:text="24"  android:textSize="@dimen/texto_header_columnas"
+                       android:layout_weight="1" android:gravity="center_horizontal">
+                   </TextView>
+                <TextView
+                      android:id="@+id/SixthText"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:text="88"  android:textSize="@dimen/texto_header_columnas"     android:textStyle="bold"
+                      android:layout_weight="1" android:gravity="center_horizontal">
+                  </TextView>
+            </LinearLayout>
+
+    <LinearLayout
+                    android:id="@+id/parciales_visitante"
+                    android:layout_below="@+id/parciales_local"
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:background="@color/white"
+                    android:layout_alignParentLeft="true" android:layout_alignParentStart="true" android:paddingTop="3dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Quilmes (MdP)"
+                        android:textSize="@dimen/texto_header_columnas"
+                        android:gravity="center_horizontal">
+                    </TextView>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="11"    android:textSize="@dimen/texto_header_columnas"
+                        android:gravity="center_horizontal">
+                    </TextView>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="21" android:textSize="@dimen/texto_header_columnas"
+                        android:layout_weight="1" android:gravity="center_horizontal">
+                    </TextView>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="13"  android:textSize="@dimen/texto_header_columnas"
+                        android:layout_weight="1" android:gravity="center_horizontal">
+                    </TextView>
+
+                    <TextView
+
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:text="04"  android:textSize="@dimen/texto_header_columnas"
+                           android:layout_weight="1" android:gravity="center_horizontal">
+                       </TextView>
+                    <TextView
+
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:text="65"  android:textSize="@dimen/texto_header_columnas"     android:textStyle="bold"
+                          android:layout_weight="1" android:gravity="center_horizontal">
+                      </TextView>
+                </LinearLayout>
+</RelativeLayout>

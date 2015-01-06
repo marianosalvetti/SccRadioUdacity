@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/titulo_seccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"   android:textSize="@dimen/texto_header"
+        android:text="JUGADAS DEL PARTIDO (deslizar para actualizar)"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+          android:id="@+id/header_jornadas" android:layout_below="@id/titulo_seccion"
+          android:layout_height="wrap_content"
+          android:layout_width="fill_parent"    android:background="@color/white">
+
+          <TextView
+              android:id="@+id/FirstText"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text=" Q "   android:textSize="@dimen/texto_header_columnas"   android:textStyle="bold"
+              android:layout_marginRight="5dp" android:layout_marginLeft="2dp">
+          </TextView>
+
+          <TextView
+              android:id="@+id/SecondText"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text=" T "    android:textSize="@dimen/texto_header_columnas"   android:textStyle="bold"
+              android:layout_marginRight="5dp" android:layout_marginLeft="2dp">
+          </TextView>
+
+          <TextView
+              android:id="@+id/ThirdText"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:text="EQUIPO" android:textSize="@dimen/texto_header_columnas"  android:textStyle="bold"
+              android:layout_weight="1" android:gravity="center_horizontal">
+          </TextView>
+
+          <TextView
+              android:id="@+id/FourthText"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:text="JUGADOR"  android:textSize="@dimen/texto_header_columnas"  android:textStyle="bold"
+              android:layout_weight="2" android:gravity="left">
+          </TextView>
+
+          <TextView
+                 android:id="@+id/FifthText"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:text="ACCION"  android:textSize="@dimen/texto_header_columnas"  android:textStyle="bold"
+                 android:layout_weight="1" android:gravity="left">
+             </TextView>
+          <TextView
+                android:id="@+id/SixthText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="SCORE"  android:textSize="@dimen/texto_header_columnas"     android:textStyle="bold"
+                android:layout_weight="1" android:gravity="center_horizontal">
+            </TextView>
+      </LinearLayout>
+
+   <android.support.v4.widget.SwipeRefreshLayout
+         android:id="@+id/swipeRefreshLayout"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent" android:layout_below="@+id/header_jornadas">
+
+        <ListView
+             android:id="@+id/listView"
+             android:layout_width="match_parent" android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+             android:textColor="@android:color/black"
+             android:background="@color/white"
+                 android:cacheColorHint="#00ffffff"
+                 android:clickable="false"
+                 android:divider="#ff000000"
+                 android:dividerHeight="1dp"
+                 android:focusable="false"
+                >
+         </ListView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

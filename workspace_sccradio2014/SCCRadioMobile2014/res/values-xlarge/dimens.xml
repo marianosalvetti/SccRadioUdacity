@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <dimen name="title_height">60dip</dimen>
+    <dimen name="title_bar_text_size">24sp</dimen>
+    <dimen name="text_body_padding">4sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="text_size_large">24sp</dimen>
+
+    <dimen name="home_button_text_size">28sp</dimen>
+    <dimen name="home_button_size">216dp</dimen>
+    <dimen name="home_button_size_x">216dp</dimen>
+    <dimen name="home_button_size_y">144dp</dimen>
+
+     <!-- Default screen margins, per the Android Design guidelines TNA. -->
+    <dimen name="fixture_match_text_size">26dp</dimen>
+    <dimen name="fecha_size_2012">29sp</dimen>
+    <dimen name="fixture_header_size">32dp</dimen>
+    <dimen name="fixture_header_text_size">26dp</dimen>
+    <dimen name="fixture_match_text_size_little">25dp</dimen>
+    <dimen name="screen_title_size">28pt</dimen>
+
+    <!-- sliding menu -->
+    <dimen name="slidingmenu_shadow_width">15dp</dimen>
+    <dimen name="slidingmenu_offset">450dp</dimen>
+
+    <dimen name="size_estado_partido">16sp</dimen>
+    <dimen name="texto_equipo">18sp</dimen>
+    <dimen name="icono_ganador">13dp</dimen>
+    <dimen name="margin_little">8dp</dimen>
+    <dimen name="texto_extra_grande_equipo">30dp</dimen>
+
+    <!-- LiveScores -->
+    <dimen name="texto_header">12sp</dimen>
+    <dimen name="texto_header_columnas">15sp</dimen>
+    <dimen name="texto_fila_jugadas">11sp</dimen>
+
+    <!-- lnb menu -->
+    <dimen name="lnb_button_h">250dip</dimen>
+</resources>

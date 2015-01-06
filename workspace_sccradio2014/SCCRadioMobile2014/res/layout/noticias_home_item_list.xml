@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_parent_rounded_corner"
+    android:orientation="horizontal"
+
+          android:layout_marginLeft="@dimen/feed_item_margin"
+          android:layout_marginRight="@dimen/feed_item_margin"
+          android:layout_marginTop="@dimen/feed_item_margin"
+    android:padding="5dip" android:paddingBottom="15dip">
+
+    <ar.com.sccradiomobile.storage.util.image.FeedImageView
+               android:id="@+id/ivThumbnail"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@color/white"
+               android:scaleType="fitXY"
+               android:visibility="visible" />
+  <!--
+    <com.android.volley.toolbox.NetworkImageView
+                  android:id="@+id/ivThumbnail"   android:layout_weight="0.33"
+                  android:layout_width="fill_parent" android:layout_height="201dp" />
+
+    Titulo de la noticia -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Santiago Scala renovó con Gimnasia Indalo de Comodoro"
+        android:textColor="@color/link"
+        android:background="@color/feed_bg"
+        android:typeface="sans"
+        android:textSize="20sp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp" android:paddingBottom="10dp" android:paddingRight="5dp"
+        android:layout_below="@+id/rl_text"/>
+    <RelativeLayout
+            android:id="@+id/rl_text"
+            android:background="@color/feed_bg"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_below="@+id/ivThumbnail"
+            android:layout_alignParentRight="true" android:layout_alignParentEnd="true"
+            android:layout_marginBottom="0dp">
+
+        <!-- categoria de la noticia atento a orange_lnb-->
+        <TextView
+            android:id="@+id/categoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:typeface="sans"    android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="@color/timestamp" android:background="@color/feed_bg"
+            android:text="NOTICIAS LNB"
+            android:textSize="13sp" android:paddingLeft="0dp"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="false" android:paddingTop="5dp" android:paddingRight="10dp"
+            android:paddingBottom="5dp" android:gravity="left" android:visibility="invisible"/>
+        <TextView android:id="@+id/fechaNoticia" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="04 DE JUNIO 2014" android:textColor="@color/gray" android:typeface="sans"
+                      android:textSize="13sp"
+                      android:layout_alignParentTop="true" android:layout_alignParentRight="true"
+                      android:layout_alignParentEnd="true" android:layout_marginRight="10dp"
+                      android:layout_marginTop="8dp"/>
+
+   </RelativeLayout>
+
+</RelativeLayout>

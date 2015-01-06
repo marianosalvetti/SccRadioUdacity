@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:gravity="fill"
+              android:orientation="vertical">
+      <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+          <Button android:id="@+id/btn_date"
+                  android:layout_width="49dp"
+                  android:layout_height="match_parent"
+                  android:background="@drawable/calendar"/>
+
+        <HorizontalScrollView   android:id="@+id/scroll_dates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp">
+
+            <LinearLayout    android:id="@+id/ll_scroll_dates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+          <TextView
+                    android:id="@+id/no_dates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sin fechas proxima de juego"
+                    android:textColor="#1B0A2A"
+                    android:textSize="@dimen/texto_equipo"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginTop="15sp"  android:visibility="gone"
+                    android:layout_gravity="center_horizontal"/>
+      </LinearLayout>
+
+    <TextView
+               android:id="@+id/tvDisplayDate"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Seleccione fecha"
+               android:textColor="#1B0A2A"
+               android:textSize="@dimen/texto_equipo"
+               android:textStyle="bold"
+               android:gravity="center"
+               android:layout_marginTop="15sp"
+               android:layout_gravity="center_horizontal" android:layout_marginBottom="2dp"/>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray" android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"/>
+    <ListView
+           android:id="@+id/listResultados"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp">
+       </ListView>
+
+       <TextView
+           android:id="@android:id/empty"
+           style="@android:style/TextAppearance.Large"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:gravity="center"    android:visibility="gone"
+           android:text="@string/seleccione_jornada" android:layout_gravity="center_horizontal"/>
+
+    <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"  android:visibility="gone"
+            android:src="@drawable/ic_launcher" android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15sp"/>
+    <TextView
+            android:id="@+id/TextView07"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_existe_torneo"
+            android:textColor="#1B0A2A"
+            android:textSize="@dimen/texto_extra_grande_equipo"
+            android:textStyle="bold"  android:visibility="gone"
+            android:gravity="center" android:layout_marginTop="15sp"/>
+
+</LinearLayout>

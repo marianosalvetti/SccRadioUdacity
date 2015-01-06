@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SCCRadio Mobile</string>
+    <string name="app_description">Aplicacion Mobile Oficial de SCCRadio</string>
+    <string name="title_section0">Noticias</string>
+    <string name="title_section1">Noticias Filafilo</string>
+    <string name="title_section2">Detalle Noticias</string>
+    <string name="title_section3">Seccion 3</string>
+    <string name="title_section4">Imagenes</string>
+    <string name="title_section5">Canal de Youtube</string>
+    <string name="title_section6">Estadisticas</string>
+    <string name="title_section7">PROXIMOS PARTIDOS</string>
+    <string name="action_settings">Configuraciones</string>
+    <string name="title_section8">Sponsors</string>
+    <string name="title_section9">Ayuda</string>
+    <string name="noticia_titulo_ejemplo">Titulo de Noticia</string>
+
+    <string name="action_previous">Anterior</string>
+    <string name="action_next">Siguiente</string>
+    <string name="action_finish">Final</string>
+    
+    <string name="sin_resultados">Sin resultados!</string>
+    <string name="seleccione_jornada">Seleccione una Jornada</string>
+    <string name="no_existe_torneo">No existe torneo en juego actualmente</string>
+
+    <string name="header_equipos_20142015">Temporada 2014/2015</string>
+    <string name="footer_equipos">mas informacion en www.sccradio.com.ar</string>
+
+    <!-- Progress dialog -->
+    <string name="progress_dialog_title">Descargando Informacion</string>
+    <string name="progress_dialog_title_msg">Atencion</string>
+    <string name="progress_dialog_message">Un momento por favor</string>
+    <string name="progress_dialog_error_message">Error: No tiene conexion al Internet para descargar la informacion.</string>
+    <string name="progress_dialog_ok">OK</string>
+
+    <string name="contact_email">salvetti.mariano@gmail.com</string>
+    <string name="contact_email_subject">SCCRadio Mobile feedback</string>
+    <string name="toast_contact_no_email">"Lo sentimos, pero no hemos encontrado ninguna aplicación de correo electrónico en su dispositivo. Por favor, instale primero y vuelva a intentarlo."</string>
+    <string name="toast_unsupported_encoding">"Lo sentimos, el dispositivo no soporta codificación UTF-8."</string>
+    <string name="fecha_texto1">dom\ndec 20</string>
+    <string name="fecha_texto2">lun\ndec 21</string>
+    <string name="fecha_texto3">mar\ndec 22</string>
+    <string name="fecha_texto4">mie\ndec 23</string>
+    <string name="fecha_texto5">jue\ndec 24</string>
+    <string name="fecha_texto6">vie\ndec 25</string>
+    <string name="fecha_texto7">sab\ndec 26</string>
+    <string name="fecha_texto8">dom\ndec 27</string>
+    <string name="fecha_texto9">lun\ndec 28</string>
+    <string name="fecha_texto10">mar\ndec 29</string>
+    <string name="fecha_texto11">mie\ndec 30</string>
+    <string name="fecha_texto12">jue\nene 01</string>
+    <string name="fecha_texto13">vie\nene 02</string>
+    <string name="fecha_texto14">sab\nene 03</string>
+    <string name="fecha_texto15">dom\nene 04</string>
+    <string name="fecha_texto16">lun\nene 05</string>
+
+    <string name="empty_string"> </string>
+    <string name="menu_op_1">NOTICIAS</string>
+    <string name="menu_op_2">TORNEO NACIONAL DE ASCENSO</string>
+    <string name="menu_op_3">PROXIMOS PARTIDOS</string>
+    <string name="menu_op_4">MULTIMEDIA</string>
+    <string name="menu_op_5">Videos de Youtube</string>
+    <string name="menu_op_6">Imagenes de Picasa</string>
+    <string name="menu_op_7">GENERAL</string>
+    <string name="menu_op_8">AYUDA</string>
+    <string name="menu_op_9">CALIFICAR APLICACIÓN</string>
+    <string name="menu_op_10">SPONSORS</string>
+    <string name="menu_op_11">CONFIGURACION</string>
+    <string name="menu_op_12">FEEDBACK</string>
+    <string name="no_internet_error">"Sin Conexion a Internet. "</string>
+    <string name="msg_under_construction">Seccion CONFIGURACION en Construccion</string>
+    <string name="push_to_refresh_msg">[deslizar hacia abajo para actualizar]</string>
+    <string name="msg_jugadas">"Jugadas del partido "</string>
+    <string name="msg_error_stats">Ocurrió un error al buscar estadisticas</string>
+    <string name="msg_end_game">FINALIZADO</string>
+    <string name="msg_play_game">EN JUEGO</string>
+    <string name="loading">Cargando...</string>
+    <string name="footer_splash">2015 APP OFICIAL - WWW.SCCRADIO.COM.AR</string>
+    <string name="no_network_msg">SIN INTERNET\nno se puede sincronizar la informacion, pero si usar la aplicacion.
+    </string>
+    <string name="full_screen">Pantalla Completa</string>
+
+</resources>

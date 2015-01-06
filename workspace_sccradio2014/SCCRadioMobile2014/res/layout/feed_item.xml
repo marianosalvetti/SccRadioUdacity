@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/feed_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:layout_marginLeft="@dimen/feed_item_margin"
+        android:layout_marginRight="@dimen/feed_item_margin"
+        android:layout_marginTop="@dimen/feed_item_margin"
+        android:background="@drawable/bg_parent_rounded_corner"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/feed_item_margin_top_small"
+        android:paddingTop="@dimen/feed_item_margin_top_small" >
+        <TextView
+            android:id="@+id/tvTitle"   android:textColor="@color/black"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingLeft="@dimen/feed_item_status_pad_left_right"
+            android:paddingRight="@dimen/feed_item_status_pad_left_right"
+            android:paddingTop="@dimen/feed_item_status_pad_top" android:textSize="23sp"
+            android:text="Titulo de la Noticia" android:textStyle="bold"
+            android:layout_toRightOf="@+id/ivThumbnail"/>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtResumen"    android:textColor="@color/text_color_noticia_detalle"
+                android:layout_width="fill_parent"  android:visibility="visible"
+                android:layout_height="wrap_content"
+                android:linksClickable="true"
+                android:paddingBottom="10dp"     android:text="resumen de la noticia"
+                android:paddingLeft="@dimen/feed_item_status_pad_left_right"
+                android:paddingRight="@dimen/feed_item_status_pad_left_right"
+                android:textColorLink="@color/link"
+                android:layout_toRightOf="@+id/ivThumbnail"/>
+
+            <ar.com.sccradiomobile.storage.util.image.FeedImageView
+                android:id="@+id/ivThumbnail"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="@dimen/feed_item_margin_top_small"
+                android:background="@color/white"
+                android:visibility="visible" android:layout_centerVertical="true"/>
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:paddingLeft="@dimen/feed_item_padding_left_right"
+                 android:paddingRight="@dimen/feed_item_padding_left_right"
+                 android:layout_below="@+id/txtResumen" android:layout_alignParentRight="true"
+                 android:layout_alignParentEnd="true">
+
+                 <com.android.volley.toolbox.NetworkImageView
+                     android:id="@+id/profilePic"
+                     android:layout_width="@dimen/feed_item_profile_pic"
+                     android:layout_height="@dimen/feed_item_profile_pic"
+                     android:scaleType="fitCenter" >
+                 </com.android.volley.toolbox.NetworkImageView>
+
+                 <LinearLayout
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical"
+                     android:paddingLeft="@dimen/feed_item_profile_info_padd" >
+
+                     <TextView
+                         android:id="@+id/name"
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         android:textSize="@dimen/feed_item_profile_name"    android:textColor="@color/text_color_noticia_detalle"
+                         android:textStyle="bold" android:text="por Diego Salvetti"/>
+
+                     <TextView
+                         android:id="@+id/fechaNoticia"
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         android:textColor="@color/timestamp"
+                         android:textSize="@dimen/feed_item_timestamp" />
+                 </LinearLayout>
+             </LinearLayout>
+
+         </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

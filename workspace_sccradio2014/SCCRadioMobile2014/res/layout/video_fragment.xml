@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout1"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/feed_bg">
+  
+    <fragment
+        android:name="com.google.android.youtube.player.YouTubePlayerSupportFragment"
+        android:id="@+id/youtubeplayerfragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/> 
+  <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="http://www.SCCRADIO.com.ar"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:autoLink="web" />
+    
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnviewfullscreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/full_screen" />
+
+            <TextView 
+                android:id="@+id/videolog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:textColor="@color/white"/>
+            
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

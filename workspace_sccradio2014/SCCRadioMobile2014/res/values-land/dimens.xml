@@ -1,0 +1,14 @@
+<resources>
+
+  <!-- sliding menu -->
+    <dimen name="slidingmenu_shadow_width">15dp</dimen>
+    <dimen name="slidingmenu_offset">900dp</dimen>
+    
+    <dimen name="list_padding">10dp</dimen>
+    <dimen name="shadow_width">15dp</dimen>
+
+    <integer name="num_cols">1</integer>
+    
+    <!-- lnb menu -->
+    <dimen name="lnb_button_h">80dip</dimen>
+</resources>

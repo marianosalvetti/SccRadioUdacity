@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:orientation="horizontal"
+   android:background="@drawable/slidingmenu_list_selector_background">
+
+
+    <ar.com.sccradiomobile.utils.RobotoTextView
+       android:id="@+id/slidingmenu_sectionitem_label"
+       android:layout_width="fill_parent"
+       android:layout_height="30dp"
+       android:gravity="center_vertical"
+       android:text="Resultados en Vivo"  android:textAllCaps="true"
+       android:textColor="@color/lnb_text_color_item"
+       android:layout_marginLeft="20dp"
+       android:layout_marginTop="0dp" android:layout_gravity="center_vertical"/>
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:background="@color/white"
+               android:gravity="fill"
+               android:orientation="vertical">
+        <LinearLayout android:id="@+id/header_layout_container"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"   android:background="@drawable/background_splash"
+                      android:layout_gravity="center"
+                      android:gravity="center"
+                      android:orientation="vertical">
+        <TextView
+                    android:id="@+id/tvTituloMatchCenter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_section7"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginTop="8sp"
+                    android:layout_gravity="center" android:layout_marginBottom="8sp"/>
+            <TextView
+                        android:id="@+id/tituloCategoria"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:gravity="center"  android:visibility="gone"
+                        android:layout_gravity="center" android:layout_marginBottom="0dp"/>
+        </LinearLayout>
+ <View
+     android:layout_width="fill_parent"
+     android:layout_height="2dp"    android:layout_marginTop="0sp"
+     android:background="@android:color/darker_gray" android:layout_marginRight="5dp"
+     android:layout_marginLeft="5dp" android:visibility="gone"/>
+
+<ListView
+        android:id="@+id/listPartidos"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp"
+        android:visibility="visible">
+
+
+</ListView>
+    <TextView
+        android:id="@+id/list_empty"
+        android:text="Sin Partidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"      android:visibility="gone"
+        android:layout_gravity="center" android:textSize="20sp" android:textStyle="bold"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

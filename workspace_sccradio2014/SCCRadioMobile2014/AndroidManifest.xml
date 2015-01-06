@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="ar.com.sccradiomobile"
+          android:versionCode="1"
+          android:versionName="0.0.1">
+
+    <!-- from sdk 2.3 to sdk 5.0 supported-->
+    <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="21"/>
+
+    <!-- Permission - Internet Connect -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Network State Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <supports-screens
+            android:anyDensity="true"
+            android:resizeable="true"
+            android:smallScreens="true"
+            android:normalScreens="true"
+            android:largeScreens="true"
+            android:xlargeScreens="true"/>
+
+    <application
+            android:name=".SCCRadioMobileApp"
+            android:allowBackup="true" android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name" android:description="@string/app_description"
+            android:theme="@style/Theme.Sherlock.Light.DarkActionBar">
+
+        <activity android:name="ar.com.sccradiomobile.home.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Home Page con las noticias de la home -->
+        <!--  SECCION NOTICIAS, a partir de la HomePage   -->
+        <activity android:name="ar.com.sccradiomobile.home.HomePage" android:label="@string/app_name"
+                  android:alwaysRetainTaskState="true" android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <!--  detalle de una noticia -->
+        <activity android:name="ar.com.sccradiomobile.home.noticias.DetalleNoticiaActivity" android:label="@string/app_name"/>
+
+
+
+        <!-- SECCION Live_Score con los Resultados en Vivo -->
+        <activity android:name="ar.com.sccradiomobile.livescores.LiveScoresActivity" android:label="@string/title_section7"
+                  android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <activity android:name="ar.com.sccradiomobile.livescores.DetailPartidoActivity" android:label="@string/title_section7"/>
+
+
+        <!-- Es una prueba de concepto sobre el framework Volley y la persistencia offline -->
+        <activity android:name=".images.DynamicPhotoListActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".home.HomePage"/>
+        </activity>
+
+
+        <!-- SECCION Videos de Youtube -->
+        <activity android:name=".videos.SCCRadioVideosActivity"
+                  android:label="Videos de YouTube" android:parentActivityName="ar.com.sccradiomobile.home.HomePage">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".home.HomePage"/>
+        </activity>
+        <!-- Detalle de un video especifico -->
+        <activity android:name="ar.com.sccradiomobile.videos.VideoFragmentDetalle" android:label="Videos de YouTube"/>
+
+
+        <!-- SECCION AYUDA -->
+        <activity android:name="ar.com.sccradiomobile.ayuda.AyudaSlideActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".home.HomePage"/>
+        </activity>
+
+        <activity android:name="ar.com.sccradiomobile.sponsors.Sponsors">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".home.HomePage"/>
+        </activity>
+
+
+        <provider android:name="ar.com.sccradiomobile.storage.provider.PostContentProvider"
+                  android:authorities="ar.com.sccradiomobile.provider">
+               </provider>
+        <provider
+               android:name="ar.com.sccradiomobile.storage.provider.FeedContentProvider"
+               android:authorities="ar.com.sccradiomobile.feedsprovider">
+       </provider>
+
+    </application>
+
+</manifest>

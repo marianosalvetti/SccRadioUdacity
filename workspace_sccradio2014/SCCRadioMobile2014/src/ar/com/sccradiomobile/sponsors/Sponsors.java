@@ -43,8 +43,9 @@ public class Sponsors extends BaseActivity {
 
 
         cambiamosElTitulo(R.string.title_section8);
-      		setSlidingActionBarEnabled(true);
-      		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+      	setSlidingActionBarEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setIcon(android.R.color.transparent);
 	}
 
   

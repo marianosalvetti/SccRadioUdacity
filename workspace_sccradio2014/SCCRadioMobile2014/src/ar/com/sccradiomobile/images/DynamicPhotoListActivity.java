@@ -17,7 +17,6 @@ import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
-import android.widget.Toast;
 import ar.com.sccradiomobile.R;
 import ar.com.sccradiomobile.databases.FeedTable;
 import ar.com.sccradiomobile.livescores.LiveScoresActivity;
@@ -29,7 +28,6 @@ import ar.com.sccradiomobile.storage.receiver.MyAlarmReceiver;
 import ar.com.sccradiomobile.storage.receiver.MyAlarmReceiver.OnScheduleUpdateListener;
 import ar.com.sccradiomobile.storage.util.Constants;
 import ar.com.sccradiomobile.storage.util.request.GsonRequest;
-
 import com.actionbarsherlock.view.MenuItem;
 import com.android.volley.Request;
 import com.android.volley.VolleyError;
@@ -94,7 +92,15 @@ public class DynamicPhotoListActivity extends RequestActivity<PicasaResponse>
 
 		cambiamosElTitulo(R.string.title_section4);
 		setSlidingActionBarEnabled(true);
+
+
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+		/**
+		 * here we have the solution for the navigation icon
+		 */
+		getSupportActionBar().setIcon(android.R.color.transparent);
+
 
         if (Constants.DEBUG)  Log.d("sccradio", "comenzando con el retrieveLocalFeeds... ");
 		retrieveLocalFeeds();
@@ -125,11 +131,11 @@ public class DynamicPhotoListActivity extends RequestActivity<PicasaResponse>
 
 		mListView.setOnItemClickListener(new OnItemClickListener() {
 			  @Override
-			  public void onItemClick(AdapterView<?> parent, View view,
-			    int position, long id) {
-			    Toast.makeText(getApplicationContext(),
+			  public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
+			 /*   Toast.makeText(getApplicationContext(),
 			      "Tap on Image " + (position +1), Toast.LENGTH_LONG)
 			      .show();
+			  */
 			  }
 		 
 			}); 
@@ -213,7 +219,7 @@ public class DynamicPhotoListActivity extends RequestActivity<PicasaResponse>
 				+ RESULT_PER_PAGE + "&start-index=" + startIndex + "&alt=json";
 
 
-		Log.d(TAG, "GET URL: " + url.toString());
+		if (Constants.DEBUG) Log.d(TAG, "GET URL: " + url.toString());
 		GsonRequest<PicasaResponse> request = new GsonRequest<PicasaResponse>(
 				Request.Method.GET, url, PicasaResponse.class, this, this);
 

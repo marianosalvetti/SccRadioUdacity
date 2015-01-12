@@ -108,6 +108,8 @@ public class LiveScoresActivity extends BaseActivity implements OnClickListener 
         cambiamosElTitulo(R.string.title_section7);
         setSlidingActionBarEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setIcon(android.R.color.transparent);
+
     }
 
     @Override

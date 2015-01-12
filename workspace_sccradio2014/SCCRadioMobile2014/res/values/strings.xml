@@ -80,5 +80,6 @@
     <string name="no_network_msg">SIN INTERNET\nno se puede sincronizar la informacion, pero si usar la aplicacion.
     </string>
     <string name="full_screen">Pantalla Completa</string>
+    <string name="close_label">Cerrar</string>
 
 </resources>

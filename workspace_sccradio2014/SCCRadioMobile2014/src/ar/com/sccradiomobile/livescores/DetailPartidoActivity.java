@@ -55,7 +55,7 @@ public class DetailPartidoActivity extends BaseActivity {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayShowCustomEnabled(true);
-        actionBar.setIcon(R.drawable.ic_drawer);
+        actionBar.setIcon(android.R.color.transparent);
 
         View mView = getLayoutInflater().inflate(R.layout.actionbar_view, null);
         actionBar.setCustomView(mView, new ActionBar.LayoutParams(

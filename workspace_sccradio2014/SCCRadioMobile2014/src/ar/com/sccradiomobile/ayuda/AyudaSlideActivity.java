@@ -66,6 +66,7 @@ public class AyudaSlideActivity extends BaseActivity {
         cambiamosElTitulo(R.string.title_section9);
         setSlidingActionBarEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setIcon(android.R.color.transparent);
 
     }
 

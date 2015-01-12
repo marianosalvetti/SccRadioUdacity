@@ -74,6 +74,7 @@ public class SCCRadioVideosActivity extends BaseActivity implements SelectionFra
         cambiamosElTitulo(R.string.title_section5);
         setSlidingActionBarEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setIcon(android.R.color.transparent);
 
 
         selectionFragment = (SelectionFragment) this.getSupportFragmentManager().findFragmentById(R.id.selection_fragment);

@@ -2,11 +2,9 @@ package ar.com.sccradiomobile.home;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
-import android.widget.Toast;
 import ar.com.sccradiomobile.BaseActivity;
 import ar.com.sccradiomobile.R;
 import ar.com.sccradiomobile.SCCRadioMobileApp;
@@ -65,7 +63,7 @@ public class HomePage extends BaseActivity {
 
     }
 
-    @Override
+ /*   @Override
     public void onBackPressed() {
         if (doubleBackToExitPressedOnce) {
             super.onBackPressed();
@@ -83,5 +81,5 @@ public class HomePage extends BaseActivity {
         }, 2000);
 
     }
-
+   */
 }

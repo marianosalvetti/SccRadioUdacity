@@ -193,7 +193,6 @@ public class BaseActivity extends SlidingFragmentActivity {
     protected void cambiamosElTitulo(final int title_section) {
         ActionBar actionBar = this.getSupportActionBar();
 
-
         TextView partido = (TextView) actionBar.getCustomView().findViewById(R.id.texto_header);
         partido.setVisibility(View.VISIBLE);
 

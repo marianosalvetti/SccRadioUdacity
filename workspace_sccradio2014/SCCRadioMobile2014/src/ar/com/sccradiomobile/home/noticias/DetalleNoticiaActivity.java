@@ -17,6 +17,7 @@ import ar.com.sccradiomobile.databases.PostTable;
 import ar.com.sccradiomobile.livescores.LiveScoresActivity;
 import ar.com.sccradiomobile.storage.provider.PostContentProvider;
 import ar.com.sccradiomobile.storage.util.Constants;
+import ar.com.sccradiomobile.utils.DetailImageFullScreenActivity;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.view.MenuItem;
 import com.android.volley.toolbox.NetworkImageView;
@@ -45,7 +46,8 @@ public class DetalleNoticiaActivity  extends BaseActivity implements LoaderManag
         overridePendingTransition(R.anim.left_in, R.anim.left_out);
 		setSlidingActionBarEnabled(true);
 		setContentView(R.layout.noticia_detalle_activity);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
 
         tituloTextView = (TextView) findViewById(R.id.titulo_noticia);
                       ActionBar actionBar = getSupportActionBar();
@@ -73,6 +75,8 @@ public class DetalleNoticiaActivity  extends BaseActivity implements LoaderManag
 		    getSupportLoaderManager().initLoader(LOADER_NOTICIA_BY_ID, null, this);
         }
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setIcon(android.R.color.transparent);
 	}
 
 
@@ -175,6 +179,17 @@ public class DetalleNoticiaActivity  extends BaseActivity implements LoaderManag
                                 // display placeholder or whatever you want
                                 ivThumbnail.setImageResource(R.drawable.no_image);
                             }
+
+                            final String finalImageUrl = imageUrl;
+                            ivThumbnail.setOnClickListener(new View.OnClickListener() {
+                                          public void onClick(View v) {
+                                              Intent intent = new Intent(DetalleNoticiaActivity.this, DetailImageFullScreenActivity.class);
+                                              intent.putExtra("ORIGEN", "NOTICIAS");
+                                              intent.putExtra("PATH", finalImageUrl);
+                                              startActivity(intent);
+                                          }
+                                      }
+                            );
                           // cambiamos el titulo
                         cambiamosElTitulo(title);
                        }
